@@ -1,11 +1,11 @@
 body,html{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     padding: 0%;
     margin: 0%;
-    /* display: flex; */
-    background-color: black;
-    overflow: hidden;
+    display: flex;
+    background-color:white;
+  
     box-sizing: border-box;
 }
 
@@ -14,6 +14,7 @@ h2{
 }
 
 .form-container{
+    display: none;
    position: relative;
    top: 50px;
     height: 100%;
@@ -51,4 +52,71 @@ h2{
 
 li{
     list-style: none;
+}
+.scene{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+
+}
+.left-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-btn{
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    background-color:#fff;
+    color: #555;
+    align-items: center;
+    justify-content: center;
+}
+.card-wrapper{
+    position: relative;
+    width: 300px;
+}
+.card{
+    
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px 28px 22px ;
+    width:100%;
+    box-shadow: 0 2px 6px rgba(0,0,0, .06), 0 8px 24px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 1;
+   
+}
+.card-wrapper::before{
+    content: '';
+    position: absolute;
+    width: 88%;
+    height: 100%;
+    bottom: -20px;
+    
+    background: #e0e0e0;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 76%;
+    height: 100%;
+    bottom: -30px;
+    
+    background: #d0d0d0;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
