@@ -11,3 +11,7 @@ let closeForm = document.querySelector("#closeForm")
 addNote.addEventListener("click", function(){
     formContainer.style.display ="initial"
 })
+
+closeForm.addEventListener("click",function(){
+    formContainer.style.display="none"
+})
