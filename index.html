@@ -1,73 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Call Manager</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
+
 <body>
-    <div class="form-container">
-        <!-- <h2>New Call</h2> -->
-        <form id="forms">
-            <h2>New call</h2>
-            <label>Image url</label>
-            <input type="text" placeholder=""/>
 
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter Full Name"/>
-            
-            <label>Home town</label>
-            <input type="text" placeholder="Enter home town"/>
-            
-            <label>Purpose</label>
-            <input type="text" placeholder="e.g.Quick appointment note"/>
+  <!-- FORM -->
+  <div class="form-container">
+    <form id="callForm">
+      <h2>New Call</h2>
 
-            <label>Category</label>
-            <li><input class="tick" type="checkbox"><label>item1</label></li>
-            <li><input class="tick" type="checkbox"><label>item1</label></li>
-            <li><input class="tick" type="checkbox"><label>item1</label></li>
-            <li><input class="tick" type="checkbox"><label>item1</label></li>
-            <div class="btn">
-            <button><span>Call</span></button>
-            <button id="closeForm"><span>Submit</span></button>
-            </div>
-        </form>
+      <label for="image">Image URL</label>
+      <input id="image" type="text" placeholder="Enter image URL" />
+
+      <label for="name">Full Name</label>
+      <input id="name" type="text" placeholder="Enter full name" />
+
+      <label for="town">Home Town</label>
+      <input id="town" type="text" placeholder="Enter home town" />
+
+      <label for="purpose">Purpose</label>
+      <input id="purpose" type="text" placeholder="e.g. Quick appointment note" />
+
+      <!-- CATEGORY -->
+      <fieldset class="category">
+        <legend>Category</legend>
+
+        <label><input type="checkbox" class="tick" /> Item 1</label>
+        <label><input type="checkbox" class="tick" /> Item 2</label>
+        <label><input type="checkbox" class="tick" /> Item 3</label>
+        <label><input type="checkbox" class="tick" /> Item 4</label>
+      </fieldset>
+
+      <!-- BUTTONS -->
+      <div class="btn">
+        <button type="button" class="call-btn">
+          <i class="fa-solid fa-phone"></i> Call
+        </button>
+
+        <button type="submit" id="submitForm">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- MAIN UI -->
+  <div class="scene">
+
+    <!-- LEFT ICONS -->
+    <div class="left-icons">
+      <button class="left-btn"><i class="fa-solid fa-plus"></i></button>
+      <button class="left-btn"><i class="fa-solid fa-arrow-up"></i></button>
+      <button class="left-btn"><i class="fa-solid fa-arrow-down"></i></button>
     </div>
-    <div class="scene">
-        <!-- left icons -->
-        <div class="left-icons">
-              <button class="left-btn"><i id="add-note" class="fa-solid fa-plus"></i></button>
-              <button class="left-btn"><i id="" class="fa-solid fa-arrow-up"></i></button>
-              <button class="left-btn"><i class="fa-solid fa-arrow-down"></i></button>
-            </div>
-        <!-- card: -->
-         <div class="card-wrapper">
-            <div class="card">
-                 <div class="avatar">A</div>
-                 <div class="name">Aarish</div>
-                 <div class="info">
-                     <span class="info-label">Home town</span>
-                     <span class="info-value">Jamshedpur</span>
-                 </div>
-                 <div class="info">
-                     <span class="info-label">Booking</span>
-                     <span class="info-value">3 times</span>
-                 </div>
-                 <div class="actions">
-                     <button class="btn-call"><i class="fa-solid fa-phone"></i> Call</button>
-                     <button class="btn-msg">Message</button>   
-                 </div>
-             </div>
-         </div>
-           <div class="swatches" role="radiogroup" aria-label="Choose theme color">
-              <button class="swatch active" data-color="black"  style="--c:#1a1a1a" aria-label="Black" aria-pressed="true"></button>
-               <button class="swatch"        data-color="purple" style="--c:#7c3aed" aria-label="Purple" aria-pressed="false"></button>
-               <button class="swatch"        data-color="orange" style="--c:#ea580c" aria-label="Orange" aria-pressed="false"></button>
-               <button class="swatch"        data-color="green"  style="--c:#16a34a" aria-label="Green" aria-pressed="false"></button>
+
+    <!-- CARD -->
+    <div class="card-wrapper">
+      <div class="card">
+
+        <div class="avatar">A</div>
+        <div class="name">Aarish</div>
+
+        <div class="info">
+          <span class="info-label">Home town</span>
+          <span class="info-value">Jamshedpur</span>
         </div>
+
+        <div class="info">
+          <span class="info-label">Booking</span>
+          <span class="info-value">3 times</span>
         </div>
-    
+
+        <div class="actions">
+          <button class="btn-call">
+            <i class="fa-solid fa-phone"></i> Call
+          </button>
+          <button class="btn-msg">Message</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- COLOR SWATCHES -->
+    <div class="swatches" role="radiogroup" aria-label="Choose theme color">
+      <button class="swatch active" data-color="black" style="--c:#1a1a1a"></button>
+      <button class="swatch" data-color="purple" style="--c:#7c3aed"></button>
+      <button class="swatch" data-color="orange" style="--c:#ea580c"></button>
+      <button class="swatch" data-color="green" style="--c:#16a34a"></button>
+    </div>
+
+  </div>
+
 </body>
 </html>
